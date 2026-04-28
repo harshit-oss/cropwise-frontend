@@ -1,7 +1,6 @@
 import { useRef, useEffect } from "react";
 import styles from "./Chatbot.module.css";
-
-// ── Markdown renderer ─────────────────────────────────────────
+import { API_URL } from "../services/api";
 function renderMarkdown(text) {
   const lines = text.split("\n");
   const elements = [];
@@ -68,7 +67,7 @@ function Chatbot({ messages, setMessages, onClear, loading, setLoading, input, s
           content: msg.text,
         }));
 
-      const res  = await fetch("http://localhost:8000/api/chat", {
+      const res = await fetch(`${API_URL}/api/chat`, {
         method:  "POST",
         headers: { "Content-Type": "application/json" },
         body:    JSON.stringify({ message: userText, history }),
