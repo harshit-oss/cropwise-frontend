@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styles from "./CropRecommendation.module.css";
+import { API_URL } from "../services/api";
 
 function CropRecommendation() {
 
@@ -20,7 +21,7 @@ function CropRecommendation() {
     setLoading(true);
 
     try {
-      const res = await fetch("http://localhost:8000/api/predict-crop", {
+      const res = await fetch(`${API_URL}/api/predict-crop`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
