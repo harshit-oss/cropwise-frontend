@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styles from "./FertilizerRecommendation.module.css";
+import { API_URL } from "../services/api";
 
 const CROP_TYPES       = ["Barley","Carrot","Cotton","Maize","Potato","Rice","Soybean","Sugarcane","Tomato","Wheat"];
 const SOIL_TYPES       = ["Clay","Loamy","Peaty","Sandy","Silty"];
@@ -26,7 +27,7 @@ function FertilizerRecommendation() {
     if (missing.length) { setError("Please fill in all fields."); return; }
     setLoading(true);
     try {
-      const res = await fetch("http://localhost:8000/api/predict-fertilizer", {
+      const res = await fetch(`${API_URL}/api/predict-fertilizer`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
