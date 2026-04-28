@@ -1,0 +1,71 @@
+.container{
+  padding:40px;
+}
+
+.hero{
+
+  background:linear-gradient(
+  135deg,
+  #2e7d32,
+  #66bb6a
+  );
+
+  color:white;
+
+  padding:50px;
+
+  border-radius:20px;
+
+  margin-bottom:40px;
+
+  box-shadow:0 15px 35px rgba(0,0,0,0.2);
+}
+
+.hero h1{
+
+  font-size:40px;
+
+  margin-bottom:10px;
+}
+
+.hero p{
+
+  font-size:18px;
+
+  opacity:0.9;
+}
+
+.heroBtn{
+
+  margin-top:20px;
+
+  padding:12px 22px;
+
+  border:none;
+
+  border-radius:8px;
+
+  background:white;
+
+  color:#2e7d32;
+
+  font-weight:600;
+
+  cursor:pointer;
+
+  transition:.3s;
+}
+
+.heroBtn:hover{
+
+  transform:scale(1.05);
+}
+
+.cards{
+
+  display:flex;
+
+  gap:25px;
+
+  flex-wrap:wrap;
+}

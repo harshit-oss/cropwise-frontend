@@ -1,0 +1,26 @@
+/* Dashboard.module.css */
+
+.container {
+  padding: 35px;
+}
+
+.placeholder {
+  margin-top: 25px;
+  height: 600px;             /* taller to show full dashboard */
+  border-radius: 15px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: #777;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  overflow: hidden;          /* keeps iframe inside rounded corners */
+}
+
+.iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 15px;
+}

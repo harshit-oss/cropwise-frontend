@@ -1,0 +1,206 @@
+/* FertilizerRecommendation.module.css */
+
+/* ── Page container ── */
+.container {
+  padding: 2rem;
+  max-width: 860px;
+}
+
+.title {
+  color: #1a4d1a;
+  margin-bottom: 0.4rem;
+}
+
+.subtitle {
+  color: #555;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+/* ── Form card ── */
+.formCard {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+/* ── Grid layouts ── */
+.grid2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.grid3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* ── Form fields ── */
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.unit {
+  font-weight: normal;
+  color: #888;
+  font-size: 0.8rem;
+}
+
+.input {
+  width: 100%;
+  padding: 0.65rem 0.9rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  box-sizing: border-box;
+  background: #fff;
+  color: #333;
+  transition: border-color 0.2s;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #2d7a2d;
+}
+
+/* ── Button ── */
+.btn {
+  width: 100%;
+  margin-top: 1.25rem;
+  padding: 0.9rem;
+  background: #2d7a2d;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn:hover:not(:disabled) {
+  background: #245f24;
+}
+
+.btn:disabled {
+  background: #7ab87a;
+  cursor: not-allowed;
+}
+
+/* ── Error ── */
+.error {
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  background: #fde8e8;
+  border: 1px solid #e74c3c;
+  border-radius: 8px;
+  color: #c0392b;
+  font-size: 0.9rem;
+}
+
+/* ── Result section ── */
+.resultSection {
+  margin-top: 1.5rem;
+}
+
+/* ── Yield badge ── */
+.badge {
+  padding: 0.75rem 1.25rem;
+  border: 2px solid;
+  border-radius: 8px;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.high   { border-color: #27ae60; color: #27ae60; background: #f0faf4; }
+.medium { border-color: #f39c12; color: #e08000; background: #fffbf0; }
+.low    { border-color: #e74c3c; color: #c0392b; background: #fff5f5; }
+
+/* ── Fertilizer name card ── */
+.fertCard {
+  background: linear-gradient(135deg, #e8f5e9, #f1f8e9);
+  border: 2px solid #2d7a2d;
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+}
+
+.fertLabel {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 0.25rem;
+}
+
+.fertName {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #1a4d1a;
+}
+
+/* ── NPK cards ── */
+.npkCard {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.npkLabel {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 0.4rem;
+}
+
+.npkValue {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.2rem;
+}
+
+.npkSub {
+  font-size: 0.75rem;
+  color: #999;
+}
+
+/* NPK colours via border-top + value colour */
+.nitrogen   { border-top: 4px solid #2980b9; }
+.nitrogen   .npkValue { color: #2980b9; }
+
+.phosphorus { border-top: 4px solid #8e44ad; }
+.phosphorus .npkValue { color: #8e44ad; }
+
+.potassium  { border-top: 4px solid #e67e22; }
+.potassium  .npkValue { color: #e67e22; }
+
+/* ── Advisory box ── */
+.advice {
+  margin-top: 1rem;
+  padding: 1rem 1.25rem;
+  background: #fffde7;
+  border: 1px solid #f9a825;
+  border-radius: 10px;
+  line-height: 1.7;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  .grid2, .grid3 {
+    grid-template-columns: 1fr;
+  }
+}
